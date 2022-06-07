@@ -4,4 +4,8 @@ class Cheese < ApplicationRecord
     "#{self.name}: $#{self.price}"
   end
 
+  def index
+    Cheese.all.to_json
+  end
+
 end
